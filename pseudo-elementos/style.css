@@ -1,0 +1,35 @@
+/* Los pseudo elementos no estan en el flujo */
+/* Esto hace que la primera letra del texto tenga cierto estilo */
+p::first-letter{
+    font-size: 3em;
+}
+/* Esto hace que la primera linea del texto tenga cierto estilo */
+p::first-line{
+    color: aqua;
+}
+/* Esto hace antes del texto agrege algo */
+.text1::before{
+    content: "<>";;
+    color: black;
+    background-color: red;
+
+}
+ul li{
+    display: inline;
+}
+/* Esto hace que despues del texto agrege algo */
+li::after{
+    content: " >";
+}
+/* Esto es basicamente el ultimo hijo osea cosa3 despues de eso */
+li:last-child::after{
+    color: red;
+    font-size: 3em;
+}
+ul li:hover{
+    background-color: violet;
+}
+ul li:focus-visible{
+    background-color: teal;
+    border: 2px solid red;
+}

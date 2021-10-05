@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    background-color: salmon;
+    /* define cuantas columnas vas a querer */
+
+    /* Si la ultima es de 60% las otras dos se van a repartir el tamaño que quede de formas iguales */
+    grid-template-columns: auto auto 60%;
+    /* Si no tiene especificado el alto se va a poner el minimo */
+    grid-template-rows: 100px 100px; 
+    /* Si pongo justify content ocupara el minimo necesario */
+    justify-content: space-between;
+    /* para que el align funcione tiene que haber un height definido */
+    height: 40vh;
+    align-content: space-around;
+    
+}
+.child{
+    background-color: sandybrown;
+    margin: 10px;
+    border: black 1px solid;
+    
+}

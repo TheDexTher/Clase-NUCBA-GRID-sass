@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    background-color: rgb(56, 230, 236);
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 200px;
+    padding: 1%;
+    
+}
+.child{
+
+    background-color: rgb(243, 30, 179);
+    border: rebeccapurple 2px solid;
+    
+}
+.child:nth-child(2){
+    background-color: royalblue;
+
+    /* fila/columna/fila/columna */
+    
+    grid-area: 1 / 1 / 4 /  4;
+}

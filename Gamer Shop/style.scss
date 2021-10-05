@@ -1,0 +1,173 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* general */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+:root{
+    --main-darker-black:#1c1c1c;
+    --main-whiter-black:#292929;
+    --main-pastel-red:#cc2936;
+    --main-white:#f5f5f5;
+    --main-whiter-grey:#f5f4f4;
+}
+//Mixings//
+//Asi se usan los mixings//
+@mixin botones {
+    display: block;
+    color: var(--main-whiter-grey);
+    font-size: 1em;
+    margin: auto;
+    background-color: var(--main-darker-black);
+    border: none;
+    padding: 10px;
+    width: 150px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover{
+
+        background-color: var(--main-whiter-black);
+    
+    
+    }
+    
+
+    
+}
+/* Grid */
+.container{
+    display: grid;
+    grid-template-areas: 
+    'header header header header' 
+    'main main main aside' 
+    'footer footer footer footer';
+}
+
+/* Header */
+header{
+    background-color: var(--main-whiter-grey);
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    position: sticky;
+    top: 0px;
+    
+    h1{
+        display: inline-block;
+        color: var(--main-darker-black);
+        font-weight: normal;
+        font-size: 3em;
+        margin-left: 2%;
+    
+    }
+
+    .logo{
+        width: 70px;
+        border-radius: 3px;
+    }
+}
+
+
+
+
+/* Main */
+main{
+    grid-area: main;
+
+    .container-products{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+
+    }
+
+    .product{
+    display: grid;
+    grid-template-rows: 200px;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 5px; 
+    box-shadow: 0px 0px 12px 1px rgba(143,143,143,0.58);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(143,143,143,0.58);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(143,143,143,0.58);
+    
+    //Esto te pemite anidar cosas dentro de otras, para tener todo mas ordenado//
+    h3{
+        font-weight: lighter;
+        text-align: left;
+        padding: 1% 1% 1% 0;
+        margin: 15px 0 10px 0;
+    }
+    img{
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    button{
+        @include botones;
+    }
+}
+}
+h2{
+
+    margin-top: 2%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+
+/* Aside */
+aside{
+    background-color: #292929;
+    grid-area: aside;
+    
+    p, h3{
+        padding: 4%;
+        font-weight: normal;
+        color: var(--main-whiter-grey);
+    }
+    h3{
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    figure img{
+        width: 95%;
+        margin: auto;
+        display: block;
+        border-radius: 3px;
+    }
+    figure{
+        border-radius: 5px;
+        margin-top: 10px;
+        color: var(--main-whiter-grey);
+    }
+    figcaption{
+        text-align: center;
+        font-size: 0.8em;
+        font-style: italic;
+    }
+}
+
+/* Footer */
+
+footer{
+    grid-area: footer;
+    background-color: var(--main-whiter-grey);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    
+    p{
+        color: var(--main-darker-black);
+        padding: 1%;
+        font-size: 1.8em;
+    
+    }
+}
